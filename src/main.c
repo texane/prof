@@ -27,15 +27,14 @@ int main(int ac, char** av)
   dr_app_start();
 #endif
 
-  for (i = 0; i < 10; ++i)
-  {
-    printf("!\n");
-  }
+  for (i = 0; i < 10; ++i) printf("sys_0\n");
 
 #if USE_DYNAMO
   /* end of instrumented region */
   dr_app_stop();
 #endif
+
+  for (i = 0; i < 10; ++i) printf("sys_1\n");
 
 #if USE_DYNAMO
   /* per application finalization */

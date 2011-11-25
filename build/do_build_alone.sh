@@ -7,14 +7,15 @@
 # can be gleaned from DynamoRIOConfig.cmake
 
 DYNAMORIO_HOME=$HOME/install
-
+PROF_HOME=`pwd`
 
 # build sample application
 gcc \
 -I$DYNAMORIO_HOME/include/dr \
 -DLINUX -DX86_32 \
 -DUSE_DYNAMO=1 \
-main.c fubar.c \
+-o $PROF_HOME/build/a.out \
+$PROF_HOME/src/main.c \
+$PROF_HOME/src/fubar.c \
 -L$DYNAMORIO_HOME/lib/dr/release \
--ldynamorio -ldrpreload \
--ldl
+-ldynamorio -ldrpreload

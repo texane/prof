@@ -15,28 +15,28 @@ static dr_emit_flags_t event_bb
 )
 {
   ++count;
-  dr_printf("event\n");
+  /* dr_printf("event\n"); */
   return DR_EMIT_DEFAULT;
 }
 
 static void event_exit(void)
 {
-  dr_printf("fubar: %d\n", count);
+  dr_printf("bbcount: %d\n", count);
 }
 
 static void event_thread_init(void *drcontext)
 {
-  dr_printf("thread_init\n");
+  /* dr_printf("thread_init\n"); */
 }
 
 static void event_thread_exit(void *drcontext)
 {
-  dr_printf("thread_exit\n");
+  /* dr_printf("thread_exit\n"); */
 }
 
 static void event_post_syscall(void *drcontext, int sysnum)
 {
-  dr_printf("event_syscall\n");
+  /* dr_printf("event_syscall\n"); */
 }
 
 DR_EXPORT void dr_init(client_id_t id)

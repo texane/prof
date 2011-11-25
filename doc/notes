@@ -1,5 +1,5 @@
 . dynamorio related resources
 website: http://dynamorio.org
-sourcecode: http://code.google.com/p/dynamorio/wiki/HowToBuild
+build instructions: http://code.google.com/p/dynamorio/wiki/HowToBuild
 umbra cache simulation: http://people.csail.mit.edu/qin_zhao/umbra
 umbra source code request: qin_zhao@csail.mit.edu

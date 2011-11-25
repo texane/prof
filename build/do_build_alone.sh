@@ -11,6 +11,7 @@ PROF_HOME=`pwd`
 
 # build sample application
 gcc \
+-O2 \
 -I$DYNAMORIO_HOME/include/dr \
 -DLINUX -DX86_32 \
 -DUSE_DYNAMO=1 \
